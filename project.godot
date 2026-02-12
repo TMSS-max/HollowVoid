@@ -1,28 +1,27 @@
 [application]
-config_version=4
-run/main_scene="res://MainScene.tscn"
-run/max_fps=60
-name="HollowVoid"
-version="1.0"
-identifier="com.tmssmax.hollowvoid"
+config/name="Hollow Void"
+config/description="A Hollow Knight-style adventure game"
+config/version="1.0.0"
+config/argv/return_warnings=true
 
 [display]
-enable_vsync=true
-resize_mode=2
-window/size/width=1280
-window/size/height=720
+window/width=720
+window/height=1280
 window/fullscreen=false
+window/resizable=true
+window/vsync=true
 
 [input]
-actions/move_up="ui_up"
-actions/move_down="ui_down"
-actions/move_left="ui_left"
-actions/move_right="ui_right"
-actions/jump="ui_accept"
-actions/fire="ui_select"
-actions/pause="ui_cancel"
+actions/move_left/0= "ui_left"
+actions/move_right/0= "ui_right"
+actions/jump/0= "ui_accept"
+actions/crouch/0= "ui_cancel"
+actions/attack/0= "ui_select"
+actions/attack/0/1= "touch_attack"
+
+actions/touch_attack/0= "touch_attack"
 
 [physics]
-general/engine/physics_time_step=0.01666667
-iterations=6
-max_sub_steps=8
+default_fps=60
+use_default_step=true
+
